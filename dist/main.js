@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/style.css":
@@ -7,7 +8,6 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -18,50 +18,57 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./src/app/homepage.js ***!
   \*****************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./src/app/menupage.js":
-/*!*****************************!*\
-  !*** ./src/app/menupage.js ***!
-  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ menuPage)
+/* harmony export */   "default": () => (/* binding */ homePage)
 /* harmony export */ });
-/* harmony import */ var _assets_pumpkin_soup_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/pumpkin-soup.jpeg */ "./src/assets/pumpkin-soup.jpeg");
+function homePage() {
+    const content = document.querySelector('#content');
 
+    const coverImg = document.createElement('img');
+    coverImg.src = '../assets/cover.jpg';
+    coverImg.setAttribute('id', 'coverImg')
 
-function menuPage() {
-    const page = document.querySelector('.page')
-
-    const menuHeader = document.createElement('p');
-    const pumpkinSoupImg = document.createElement('img')
-
-    menuHeader.textContent = 'Menu';
-    pumpkinSoupImg.setAttribute('id', 'pumpkinsoup')
-    pumpkinSoupImg.src = _assets_pumpkin_soup_jpeg__WEBPACK_IMPORTED_MODULE_0__;
-    
-    page.appendChild(menuHeader)
-    page.appendChild(pumpkinSoupImg)
+    content.appendChild(coverImg)
 }
 
 /***/ }),
 
-/***/ "./src/assets/pumpkin-soup.jpeg":
-/*!**************************************!*\
-  !*** ./src/assets/pumpkin-soup.jpeg ***!
-  \**************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ "./src/app/switchtab.js":
+/*!******************************!*\
+  !*** ./src/app/switchtab.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-module.exports = __webpack_require__.p + "img/pumpkin-soup";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ switchTab)
+/* harmony export */ });
+function switchTab() {
+    const content = document.querySelector('#content');
+
+    const navbar = document.createElement('ul');
+    navbar.setAttribute('class', 'navbar-container');
+
+    const homeNav = document.createElement('li');
+    const menuNav = document.createElement('li');
+    const contactNav = document.createElement('li');
+    const promoNav = document.createElement('li');
+
+    homeNav.textContent = 'Home';
+    menuNav.textContent = 'Menu';
+    contactNav.textContent = 'Contact';
+    promoNav.textContent = 'Promo';
+
+    navbar.appendChild(homeNav);
+    navbar.appendChild(menuNav);
+    navbar.appendChild(contactNav);
+    navbar.appendChild(promoNav);
+
+    content.appendChild(navbar);
+}
 
 /***/ })
 
@@ -92,18 +99,6 @@ module.exports = __webpack_require__.p + "img/pumpkin-soup";
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -114,18 +109,6 @@ module.exports = __webpack_require__.p + "img/pumpkin-soup";
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -144,46 +127,26 @@ module.exports = __webpack_require__.p + "img/pumpkin-soup";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _app_homepage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/homepage.js */ "./src/app/homepage.js");
-/* harmony import */ var _app_homepage_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_homepage_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _app_menupage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/menupage.js */ "./src/app/menupage.js");
+/* harmony import */ var _app_switchtab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/switchtab */ "./src/app/switchtab.js");
+/* harmony import */ var _app_homepage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/homepage */ "./src/app/homepage.js");
 
 
 
 
 
+const content = document.querySelector('#content');
 
-// menuPage();
+(0,_app_switchtab__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_app_homepage__WEBPACK_IMPORTED_MODULE_2__["default"])();
 })();
 
 /******/ })()
