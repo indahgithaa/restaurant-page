@@ -19,7 +19,7 @@ export default function homePage() {
     exploreBtn.textContent = 'Explore Our Menu'
 
     welcomingWrap.appendChild(welcoming);
-    welcoming.appendChild(exploreBtn);
+    welcomingWrap.appendChild(exploreBtn);
 
     /* SECOND PAGE */
     const secondHome = document.createElement('div');
@@ -42,13 +42,32 @@ export default function homePage() {
     secondHome.appendChild(captionWrap);
     secondHome.appendChild(secondImg);
 
+    /* THIRD PAGE */
+    const thirdHome = document.createElement('div');
+    const thirdTitle = document.createElement('h1');
+
+    thirdHome.setAttribute('class', 'thirdHome');
+    thirdTitle.setAttribute('id', 'thirdTitle');
+
+    thirdTitle.textContent = 'What We Offer'
+
+    thirdHome.appendChild(thirdTitle);
+
     homepage.appendChild(welcomingWrap);
     homepage.appendChild(secondHome);
+    homepage.appendChild(thirdHome);
 
     content.appendChild(homepage);
 }
 
- // const coverImg = document.createElement('img');
-    // coverImg.setAttribute('src', cover)
-    // coverImg.setAttribute('id', 'coverImg');
-    // homepage.appendChild(coverImg);
+class Offer {
+    constructor(icon, headings, details) {
+        this.icon = icon;
+        this.headings = headings;
+        this.details = details;
+    }
+
+    getIcon = () => this.icon;
+    getHeadings = () => this.headings;
+    getDetails = () => this.details;
+}
