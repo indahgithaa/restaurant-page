@@ -27,11 +27,51 @@ __webpack_require__.r(__webpack_exports__);
 function homePage() {
     const content = document.querySelector('#content');
 
-    const coverImg = document.createElement('img');
-    coverImg.src = '../assets/cover.jpg';
-    coverImg.setAttribute('id', 'coverImg')
+    const homepage = document.createElement('div')
+    const welcomingWrap = document.createElement('div');
+    const welcoming = document.createElement('h1');
+    const exploreBtn = document.createElement('button');
 
-    content.appendChild(coverImg)
+    homepage.setAttribute('class', 'homepage');
+    exploreBtn.setAttribute('id', 'expBtn');
+    welcomingWrap.setAttribute('id', 'welcomingWrap');
+    welcoming.setAttribute('id', 'welcoming');
+
+    welcoming.innerHTML = 'The Goodness of <span> Real Foods </span> for Your Healthier Life';
+    exploreBtn.textContent = 'Explore Our Menu'
+
+    welcomingWrap.appendChild(welcoming);
+    welcoming.appendChild(exploreBtn);
+    homepage.appendChild(welcomingWrap);
+
+    content.appendChild(homepage);
+}
+
+ // const coverImg = document.createElement('img');
+    // coverImg.setAttribute('src', cover)
+    // coverImg.setAttribute('id', 'coverImg');
+    // homepage.appendChild(coverImg);
+
+/***/ }),
+
+/***/ "./src/app/menupage.js":
+/*!*****************************!*\
+  !*** ./src/app/menupage.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ menuPage)
+/* harmony export */ });
+function menuPage() {
+    const content = document.querySelector('#content');
+
+    const menuHeader = document.createElement('h1');
+
+    menuHeader.textContent = 'Our Menu. Empty. Like my soul';
+
+    content.appendChild(menuHeader)
 }
 
 /***/ }),
@@ -46,28 +86,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ switchTab)
 /* harmony export */ });
+/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ "./src/app/homepage.js");
+/* harmony import */ var _menupage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menupage */ "./src/app/menupage.js");
+
+
+
 function switchTab() {
     const content = document.querySelector('#content');
 
+    const switchDiv = document.createElement('div');
     const navbar = document.createElement('ul');
-    navbar.setAttribute('class', 'navbar-container');
-
     const homeNav = document.createElement('li');
     const menuNav = document.createElement('li');
     const contactNav = document.createElement('li');
     const promoNav = document.createElement('li');
+    const restoName = document.createElement('h1');
+    const leafImg = document.createElement('img');
+
+    navbar.setAttribute('class', 'navbar-container');
+    switchDiv.setAttribute('id', 'switchdiv');
+    restoName.setAttribute('id', 'restoname');
+    leafImg.setAttribute('id', 'leaf');
 
     homeNav.textContent = 'Home';
     menuNav.textContent = 'Menu';
     contactNav.textContent = 'Contact';
     promoNav.textContent = 'Promo';
+    restoName.textContent = 'PureHut';
+    leafImg.src = '../assets/leaf.png';
 
-    navbar.appendChild(homeNav);
-    navbar.appendChild(menuNav);
-    navbar.appendChild(contactNav);
-    navbar.appendChild(promoNav);
+    switchDiv.appendChild(homeNav);
+    switchDiv.appendChild(menuNav);
+    switchDiv.appendChild(contactNav);
+    switchDiv.appendChild(promoNav);
+    navbar.appendChild(switchDiv)
+    navbar.appendChild(restoName);
+    navbar.appendChild(leafImg);
 
     content.appendChild(navbar);
+
+    menuNav.addEventListener('click', () => {
+        content.innerHTML = '';
+        (0,_menupage__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    })
 }
 
 /***/ })
@@ -138,6 +199,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _app_switchtab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/switchtab */ "./src/app/switchtab.js");
 /* harmony import */ var _app_homepage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/homepage */ "./src/app/homepage.js");
+/* harmony import */ var _app_menupage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/menupage */ "./src/app/menupage.js");
+
 
 
 
@@ -145,8 +208,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const content = document.querySelector('#content');
 
+
+
 (0,_app_switchtab__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_app_homepage__WEBPACK_IMPORTED_MODULE_2__["default"])();
+
+
 })();
 
 /******/ })()
