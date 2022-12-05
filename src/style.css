@@ -3,6 +3,7 @@
     --color-2: #A4BE7B;
     --color-3: #5F8D4E;
     --color-4: #285430;
+    --color-5: #042c35;
 }
 
 @font-face {
@@ -18,6 +19,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 /* --- NAVBAR --- */
 
@@ -75,16 +80,12 @@ body {
 
 .homepage {
     width: 100%;
-    z-index: -3;
 }
 
-#coverImg {
-    width: 100%;
-    z-index: -2;
-    position: absolute;
-}
 
 #welcomingWrap {
+    background-image: url(./assets/cover.png);
+    background-size: cover;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -118,4 +119,35 @@ body {
     border-radius: 20px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
     cursor: pointer;
+}
+
+#expBtn:hover {
+    transition: all ease 0.4s;
+    background-color: var(--color-3);
+}
+
+.secondHome {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    align-items: center;
+}
+
+#secondTitle span {
+    color: var(--color-3);
+}
+
+#captionWrap {
+    width: 500px;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#secondImg {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
 }

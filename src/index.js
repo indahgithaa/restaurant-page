@@ -1,9 +1,7 @@
-import css from './style.css'
+import css from '../src/style.css';
 
-import switchTab from './app/switchtab'
+import navbarLoad from './app/switchTab';
 import homePage from './app/homepage';
 
-const content = document.querySelector('#content');
-
-switchTab();
+navbarLoad();
 homePage();
