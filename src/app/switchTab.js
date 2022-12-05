@@ -34,6 +34,7 @@ export default function navbarLoad() {
 
     content.appendChild(navbar);
 
+
     function switchTab() {
         homeNav.addEventListener('click', () => {
             content.innerHTML = '';

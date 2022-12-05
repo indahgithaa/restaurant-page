@@ -1,7 +1,12 @@
 import secondImage from '../assets/food1-fix.png'
+import icon1 from '../assets/checked.png';
+import icon2 from '../assets/knife-and-fork.png';
+import icon3 from '../assets/lettuce.png';
+import icon4 from '../assets/vegetables.png';
+
+const content = document.querySelector('#content');
 
 export default function homePage() {
-    const content = document.querySelector('#content');
 
     const homepage = document.createElement('div')
     homepage.setAttribute('class', 'homepage');
@@ -45,13 +50,49 @@ export default function homePage() {
     /* THIRD PAGE */
     const thirdHome = document.createElement('div');
     const thirdTitle = document.createElement('h1');
+    const cardWrap = document.createElement('div');
 
     thirdHome.setAttribute('class', 'thirdHome');
     thirdTitle.setAttribute('id', 'thirdTitle');
+    cardWrap.setAttribute('id', 'cardWrap');
 
     thirdTitle.textContent = 'What We Offer'
 
     thirdHome.appendChild(thirdTitle);
+
+    function createCard(offer) {
+        const card = document.createElement('div');
+        const icon = document.createElement('img');
+        const headings = document.createElement('h1');
+        const details = document.createElement('p');
+
+        card.setAttribute('id', 'card');
+        icon.setAttribute('id', 'icon');
+        headings.setAttribute('id', 'headings');
+        details.setAttribute('id', 'details')
+    
+        icon.src = offer.getIcon();
+        headings.textContent = offer.getHeadings();
+        details.textContent = offer.getDetails();
+    
+        card.appendChild(icon);
+        card.appendChild(headings);
+        card.appendChild(details);
+
+        cardWrap.appendChild(card)
+        thirdHome.appendChild(cardWrap);
+    }
+
+    const arr = [
+        new Offer(icon4, '100% Whole Foods', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
+        new Offer(icon3, 'Traditional Ingredients', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
+        new Offer(icon1, 'Customable Menu', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
+        new Offer(icon2, 'All Diets-Friendly', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. ')
+    ];
+
+    for (let i = 0; i < arr.length; i++) {
+        createCard(arr[i]);
+    }
 
     homepage.appendChild(welcomingWrap);
     homepage.appendChild(secondHome);
