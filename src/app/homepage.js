@@ -3,6 +3,9 @@ import icon1 from '../assets/checked.png';
 import icon2 from '../assets/knife-and-fork.png';
 import icon3 from '../assets/lettuce.png';
 import icon4 from '../assets/vegetables.png';
+import pumpkinPan from '../assets/pumpkin-pancakes.jpg';
+import tomYum from '../assets/tomyum.jpg';
+import vegeCapo from '../assets/vege-caponata.jpg';
 
 const content = document.querySelector('#content');
 
@@ -56,7 +59,7 @@ export default function homePage() {
     thirdTitle.setAttribute('id', 'thirdTitle');
     cardWrap.setAttribute('id', 'cardWrap');
 
-    thirdTitle.textContent = 'What We Offer'
+    thirdTitle.innerHTML = 'WHAT WE <span> OFFER </span>'
 
     thirdHome.appendChild(thirdTitle);
 
@@ -94,9 +97,55 @@ export default function homePage() {
         createCard(arr[i]);
     }
 
+    /* FOURTH PAGE */
+    const fourtHome = document.createElement('div');
+    const fourthTitle = document.createElement('h1');
+    const foodCardWrap = document.createElement('div');
+
+    fourtHome.setAttribute('class', 'fourthHome');
+    fourthTitle.setAttribute('id', 'fourthTitle');
+
+    fourthTitle.innerHTML = 'OUR <span> STAR </span> MENU';
+
+    fourtHome.appendChild(fourthTitle);
+
+    function createFoodCard(menu) {
+        const foodCard = document.createElement('div');
+        const foodPic = document.createElement('img');
+        const foodName = document.createElement('p');
+        const foodPrice = document.createElement('p');
+
+        foodCardWrap.setAttribute('id', 'foodCardWrap');
+        foodCard.setAttribute('id', 'foodCard');
+        foodPic.setAttribute('id', 'foodPic');
+        foodName.setAttribute('id', 'foodName');
+        foodPrice.setAttribute('id', 'foodPrice');
+
+        foodPic.src = menu.getPic();
+        foodName.textContent = menu.getName();
+        foodPrice.textContent = menu.getPrice();
+
+        foodCard.appendChild(foodPic);
+        foodCard.appendChild(foodName);
+        foodCard.appendChild(foodPrice);
+        foodCardWrap.appendChild(foodCard);
+        fourtHome.appendChild(foodCardWrap);
+    }
+
+    const foodArr = [
+        new StarMenu(pumpkinPan, 'Sweet Pumpkin Pancakes', '$12.30'),
+        new StarMenu(tomYum, 'Tom Yum Vermicelli', '$11.20'),
+        new StarMenu(vegeCapo, 'Vegetable Caponata', '$15.80'),
+    ]
+
+    for (let i = 0; i < foodArr.length; i++) {
+        createFoodCard(foodArr[i]);
+    }
+
     homepage.appendChild(welcomingWrap);
     homepage.appendChild(secondHome);
     homepage.appendChild(thirdHome);
+    homepage.appendChild(fourtHome);
 
     content.appendChild(homepage);
 }
@@ -111,4 +160,16 @@ class Offer {
     getIcon = () => this.icon;
     getHeadings = () => this.headings;
     getDetails = () => this.details;
+}
+
+class StarMenu {
+    constructor (pic, foodName, price) {
+        this.pic = pic;
+        this.foodName = foodName;
+        this.price = price;
+    }
+
+    getPic = () => this.pic;
+    getName = () => this.foodName;
+    getPrice = () => this.price;
 }

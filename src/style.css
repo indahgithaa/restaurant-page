@@ -175,6 +175,13 @@ body::-webkit-scrollbar {
     position: relative;
     top: 50px;
     color: var(--color-1);
+    font-size: 50px;
+    font-family: poppinsB;
+}
+
+#thirdTitle span {
+    color: var(--color-2);
+    font-family: poppinsB;
 }
 
 #cardWrap {
@@ -221,3 +228,5 @@ body::-webkit-scrollbar {
     text-align: justify;
     font-family: poppinsT;
 }
+
+/* FOURTH HOMEPAGE */
