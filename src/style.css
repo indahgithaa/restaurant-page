@@ -230,3 +230,47 @@ body::-webkit-scrollbar {
 }
 
 /* FOURTH HOMEPAGE */
+
+.fourthHome {
+    width: 100%;
+    height: 90vh;
+    background-image: url(./assets/background5.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+}
+
+#fourthTitle {
+    font-family: poppinsB;
+    font-size: 50px;
+}
+
+#fourthTitle span {
+    font-family: poppinsB;
+    color: var(--color-5);
+}
+
+#foodPic {
+    width: 300px;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#foodCard {
+    width: 300px;
+    height: 330px;
+    background-color: var(--color-5);
+    color: white;
+    border-radius: 20px;
+}
+
+#foodCardWrap {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
