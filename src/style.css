@@ -83,11 +83,6 @@ body::-webkit-scrollbar {
     transition: all ease 0.3s;
 }
 
-.navbar-container #switchdiv ul li a .active{
-    display: none;
-    color: var(--color-3);
-}
-
 #restoname { 
     font-size: 20px;
     align-items: center;
@@ -256,7 +251,7 @@ body::-webkit-scrollbar {
 
 .fourthHome {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-image: url(./assets/background5.jpg);
     display: flex;
     flex-direction: column;
@@ -266,7 +261,7 @@ body::-webkit-scrollbar {
 
 #fourthTitle {
     font-family: poppinsB;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #fourthTitle span {
@@ -306,5 +301,56 @@ body::-webkit-scrollbar {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 50px;
+}
+
+/* FOOTER */
+
+#footerc1 {
+    width: 25%;
+    margin-left: 10%;
+}
+
+#footerc2 {
+    width: 20%;
+}
+
+#footerc3 {
+    width: 30%;
+    margin-right: 10%;
+}
+
+#footerWrap {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--color-6);
+    height: 35vh;
+    color: white;
+}
+
+#restonameF {
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: 5px;
+    color: var(--color-4);
+    cursor: pointer;
+    margin-bottom: -10px;
+}
+
+#leafF {
+    width: 22.5px;
+    height: 22.5px;
+    margin-right: 10%;
+}
+
+#restonameF, #leafF {
+    display: inline-block;
+}
+
+#repo {
+    color: var(--color-1);
 }

@@ -4,6 +4,7 @@ import menuPage from './pages/menupage';
 import homePage from './pages/homepage';
 import contactPage from './pages/contactpage';
 import promoPage from './pages/promopage';
+import footerLoad from './pages/footerLoad';
 
 const content = document.querySelector('#content');
 
@@ -111,3 +112,4 @@ function navbarLoad() {
 
 navbarLoad();
 homePage();
+footerLoad();
