@@ -4,6 +4,7 @@
     --color-3: #5F8D4E;
     --color-4: #285430;
     --color-5: #042c35;
+    --color-6: #0E1111;
 }
 
 @font-face {
@@ -65,9 +66,26 @@ body::-webkit-scrollbar {
 
 #switchdiv li:hover {
     cursor: pointer;
-    text-decoration: underline;
+    border-bottom: 3px solid var(--color-3);
     color: var(--color-2);
     transition: all ease 0.3s;
+    height: auto;
+}
+
+#switchdiv li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-6);
+}
+
+#switchdiv li a:hover {
+    color: var(--color-3) !important;
+    transition: all ease 0.3s;
+}
+
+.navbar-container #switchdiv ul li a .active{
+    display: none;
+    color: var(--color-3);
 }
 
 #restoname { 
