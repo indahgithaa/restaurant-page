@@ -77,8 +77,23 @@ function navbarLoad() {
         }
     })
 
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop > 20) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+
+        if (navbar.classList.contains('sticky')) {
+            navbar.style.background = 'rgba(229, 217, 182, 0.5)';
+            navbar.style.height = '70px';
+        } else {
+            navbar.style.background = 'none';
+            navbar.style.height = '80px';
+        }
+    })
+
     restoName.addEventListener('click', () => {
-        activeNav.forEach((nav) => {nav.style.color = 'var(--color-6)'})
         content.innerHTML = '';
         navbarLoad();
         homePage();

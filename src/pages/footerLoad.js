@@ -21,7 +21,7 @@ export default function footerLoad() {
     repo.textContent = 'Repo on GitHub'
     repo.href = 'https://github.com/lemonaisu888/restaurant-page';
     me.innerHTML = 'Restaurant Page by Lemonice <br/> 2022';
-    info.innerHTML = 'This is only a finctional site. <br/> Created with Webpack and Vanilla JavaScript. <br/>Check out this repository on GitHub!'
+    info.innerHTML = 'This is only a fictional site. <br/> Created with Webpack and Vanilla JavaScript. <br/>Check out this repository on GitHub!'
 
     footerWrap.setAttribute('id', 'footerWrap');
     footerCard1.setAttribute('id', 'footerc1');

@@ -44,7 +44,13 @@ body::-webkit-scrollbar {
     align-items: center;
     position: absolute; 
     width: 100%;
+    height: 80px;
+    z-index: 2;
     padding: 0;
+    margin-top: 0;
+    position: fixed;
+    background: none;
+    transition: all ease 0.5s;
 }
 
 #switchdiv {
@@ -55,32 +61,26 @@ body::-webkit-scrollbar {
     position: absolute; 
     width: auto;
     padding: 0;
+    height: auto;
 }
 
 #switchdiv li {
-    position: relative;
     list-style: none;
     margin: 20px;
     font-size: large;
+    height: auto;
 }
 
 #switchdiv li:hover {
     cursor: pointer;
     border-bottom: 3px solid var(--color-3);
-    color: var(--color-2);
     transition: all ease 0.3s;
-    height: auto;
 }
 
 #switchdiv li a {
     position: relative;
     text-decoration: none;
     color: var(--color-6);
-}
-
-#switchdiv li a:hover {
-    color: var(--color-3) !important;
-    transition: all ease 0.3s;
 }
 
 #restoname { 
@@ -262,6 +262,7 @@ body::-webkit-scrollbar {
 #fourthTitle {
     font-family: poppinsB;
     font-size: 60px;
+    margin-bottom: -1%;
 }
 
 #fourthTitle span {
@@ -296,7 +297,7 @@ body::-webkit-scrollbar {
 
 #foodCardWrap {
     width: 80%;
-    height: 60%;
+    height: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -324,7 +325,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: var(--color-6);
     height: 35vh;
     color: white;
