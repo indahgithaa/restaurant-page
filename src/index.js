@@ -85,7 +85,7 @@ function navbarLoad() {
         }
 
         if (navbar.classList.contains('sticky')) {
-            navbar.style.background = 'rgba(229, 217, 182, 0.5)';
+            navbar.style.background = 'white';
             navbar.style.height = '70px';
         } else {
             navbar.style.background = 'none';
@@ -94,9 +94,7 @@ function navbarLoad() {
     })
 
     restoName.addEventListener('click', () => {
-        content.innerHTML = '';
-        navbarLoad();
-        homePage();
+        window.location.reload();
     })
 
     menu.addEventListener('click', () => {
@@ -109,12 +107,14 @@ function navbarLoad() {
         content.innerHTML = '';
         navbarLoad();
         homePage();
+        footerLoad();
     })
 
     contact.addEventListener('click', () => {
         content.innerHTML = '';
         navbarLoad();
         contactPage();
+        footerLoad();
     })
 
     promo.addEventListener('click', (e) => {
@@ -122,9 +122,12 @@ function navbarLoad() {
         content.innerHTML = '';
         navbarLoad();
         promoPage();
+        footerLoad();
     })
 }
 
-navbarLoad();
-homePage();
-footerLoad();
+window.onload = () => {
+    navbarLoad();
+    homePage();
+    footerLoad();
+}
