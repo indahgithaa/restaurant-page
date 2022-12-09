@@ -22,6 +22,11 @@
     src: url(./assets/poppins/Poppins-Medium.ttf);
 }
 
+@font-face {
+    font-family: poppinsM2;
+    src: url(./assets/poppins/Poppins-SemiBold.ttf);
+}
+
 * {
     font-family: Poppins;
 }
@@ -363,32 +368,41 @@ body::-webkit-scrollbar {
 /* ------- MENU PAGE -------- */
 
 .menuPage {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: var(--color-1);
+    background-image: url(./assets/background3.jpg);
+    background-size: cover;
 }
 
 #menuTitle {
-    position: absolute;
     text-align: center;
-    top: 30px;
     width: 100%;
-    bottom: 30px;
     font-size: 60px;
     font-family: poppinsB;
+    margin-top: 80px;
+    color: var(--color-4);
 }
 
 #menuCategory {
+    margin-top: -50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: absolute;
-    top: 120px;
-    width: 100%;
+    width: 600px;
+    border-bottom: 2px solid black;
 }
 
 #menuCategory li {
     list-style: none;
     margin: 30px;
     cursor: pointer;
+}
+
+#menuCategory li a {
+    font-family: poppinsM;
+    font-size: 20px;
 }
