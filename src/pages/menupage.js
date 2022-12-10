@@ -1,4 +1,5 @@
 import breakfastMenu from "./menu-sub/breakfast";
+import footerLoad from "./footerLoad";
 
 const content = document.querySelector('#content')
 
@@ -54,7 +55,7 @@ export default function menuPage() {
     /* SUB-MENU FUCTIONALITIES */
 
     function breakfastLoad() {
-        breakfastLink.style.color = 'var(--color-5)'
+        breakfastLink.style.color = 'var(--color-4)'
         menuDiv.appendChild(breakfastMenu());
     }
 

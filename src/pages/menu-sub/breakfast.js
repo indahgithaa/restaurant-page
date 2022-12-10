@@ -8,7 +8,8 @@ export default function breakfastMenu() {
     let breakfastArr = [
         new Breakfast('Sweet Pumpkin Pancakes', 'Naturally sweetened pancakes made with mashed organic pumpkin, cinnamon, and ginger. Served with fresh berries and honey. <br/><br/>Vegan, Gluten-free, Contains soy', '$12.30'),
         new Breakfast('Raspberry Chia English Muffin', 'Fluffy and low-sugar English muffin dotted with fresh raspberries and crunchy chia seeds. Served with homemade berry jam. <br/><br/>Gluten-free, Contains egg', '$11.00'),
-        new Breakfast('Guacamole', 'Vegan <br/>Request no onion', '$12.60'),
+        new Breakfast('Guacamole', 'Made fresh with avocadoes, onions, tomatoes, cilantro, and jalapeno. Served with lime juice. <br/><br/>Vegan, Request no onion', '$12.60'),
+        new Breakfast('Sourdough Toast', 'Available topping: <ul><li>Homemade tropical fruits jam</li><li>Unsweetened almond butter</li><li>unsweetened peanut butter', '$2.00')
     ]
 
     function createMenu(menu) {

@@ -101,13 +101,13 @@ function navbarLoad() {
         content.innerHTML = '';
         navbarLoad();
         menuPage();
+        footerLoad();
     })
 
     home.addEventListener('click', () => {
         content.innerHTML = '';
         navbarLoad();
         homePage();
-        footerLoad();
     })
 
     contact.addEventListener('click', () => {
