@@ -114,16 +114,12 @@ function navbarLoad() {
     contact.addEventListener('click', () => {
         content.innerHTML = '';
         navbarLoad();
-        contactPage();
-        footerLoad();
     })
 
     promo.addEventListener('click', (e) => {
         e.target.classList.add('active');
         content.innerHTML = '';
         navbarLoad();
-        promoPage();
-        footerLoad();
     })
 }
 

@@ -1,5 +1,6 @@
 import breakfastMenu from "./menu-sub/breakfast";
 import mainMenu from "./menu-sub/mainmenu";
+import snacksMenu from "./menu-sub/snack";
 
 const content = document.querySelector('#content')
 
@@ -80,5 +81,15 @@ export default function menuPage() {
     mainLink.addEventListener('click', () => {
         menuDiv.innerHTML = '';
         menuDiv.appendChild(mainMenu());
+    })
+
+    snacksLink.addEventListener('click', () => {
+        menuDiv.innerHTML = '';
+        menuDiv.appendChild(snacksMenu());
+    })
+
+    drinkLink.addEventListener('click', () => {
+        drinkLink.style.color = 'var(--color-4)';
+        menuDiv.innerHTML = '';
     })
 }
