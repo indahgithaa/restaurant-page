@@ -88,7 +88,7 @@ export default function homePage() {
 
     const arr = [
         new Offer(icon4, '100% Whole Foods', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
-        new Offer(icon3, 'Traditional Ingredients', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
+        new Offer(icon3, 'Homemade Ingredients', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
         new Offer(icon1, 'Customable Menu', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
         new Offer(icon2, 'All Diets-Friendly', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. ')
     ];

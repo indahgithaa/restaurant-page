@@ -451,3 +451,8 @@ body::-webkit-scrollbar {
 #foodMenuDesc {
     margin-top: 0;
 }
+
+h2 {
+    font-family: poppinsT;
+    text-decoration: underline;
+}

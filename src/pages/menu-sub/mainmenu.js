@@ -3,7 +3,7 @@ export default function mainMenu() {
 
     mainMenuDiv.setAttribute('class', ' subMenuDiv');
     
-    let mainMenuArr = [
+    const mainMenuArr = [
         new MainMenu('Tom Yum Vermicelli (soup/stir-fried)', 'Gluten-free brown rice vermicelli cooked with Thai tom yum homemade seasonings. Available options: soup and stir-fried. <br/><br/>Gluten-free, Vegan, Contains soy', '$11.20'),
         new MainMenu('Vegetable Caponata', 'Slow cooked caponata with arugula and tomato salad, tossed with a creamy vegan Caesar dressing. <br/><br/> Vegan, Contains nuts, Request for no garlic and onions', '$15.80'),
         new MainMenu('Vegetable Urap', 'Traditional steamed vegetables (bean sprouts, yardlong bean, spinach) mixed with Indonesian grated coconut seasonings. <br/><br/> Vegan', '$9.80'),
