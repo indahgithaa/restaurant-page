@@ -379,20 +379,36 @@ body::-webkit-scrollbar {
 }
 
 #menuTitle {
-    text-align: center;
-    width: 100%;
+    width: 300px;
+    text-align: left;
     font-size: 60px;
-    font-family: poppinsB;
+    font-family: poppins;
+    color: var(--color-6);
+    margin-top: 0;
+}
+
+#titleWrap {
+    display: flex;
+    flex-direction: row;
     margin-top: 80px;
-    color: var(--color-4);
+    height: 170px;
+}
+
+#titleDesc {
+    width: 600px;
+    margin-left: 40px;
+    font-family: poppinsT;
+}
+
+#titleDesc span {
+    font-family: poppinsB;
 }
 
 #menuCategory {
-    margin-top: -50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 600px;
+    width: 1200px;
     border-bottom: 2px solid black;
 }
 
@@ -405,4 +421,29 @@ body::-webkit-scrollbar {
 #menuCategory li a {
     font-family: poppinsM;
     font-size: 20px;
+}
+
+#menuDiv {
+    width: 900px;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+#subMenuDiv {
+    display: grid;
+    grid-template-columns: 400px auto;
+    margin-bottom: 30px;
+}
+
+#foodMenuName {
+    margin-top: 0;
+    text-align: left;
+}
+
+#foodMenuPrice {
+    text-align: left;
+}
+
+#foodMenuDesc {
+    margin-top: 0;
 }
