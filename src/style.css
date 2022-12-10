@@ -372,7 +372,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-image: url(./assets/background3.jpg);
+    background-color: #eff0eb;
     object-fit: cover;
     background-size: cover;
 }
@@ -420,6 +420,10 @@ body::-webkit-scrollbar {
 #menuCategory li a {
     font-family: poppinsM2;
     font-size: 20px;
+}
+
+#menuCategory li a .active {
+    color: var(--color-4);
 }
 
 #menuDiv {

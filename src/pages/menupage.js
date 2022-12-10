@@ -59,19 +59,14 @@ export default function menuPage() {
     activeMealNav.forEach((mealNav) => {
         mealNav.addEventListener('click', (e) => {
             activeMealNav.forEach((unactive) => {
-                e.target.classList.add('active');
-                unactive.classList.remove('active');
+                e.target.style.color = 'var(--color-4)';
+                unactive.style.color = 'var(--color-6)';
             })
         })
-
-        if (mealNav.classList.contains('active')) {
-            mealNav.style.color = 'var(--color-4)';
-        } else if (!mealNav.classList.contains('active')) {
-            mealNav.style.color = 'var(--color-6)';
-        }
     })
 
     function breakfastLoad() {
+        breakfastLink.style.color = 'var(--color-4)';
         menuDiv.appendChild(breakfastMenu());
     }
 
