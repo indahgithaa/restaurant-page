@@ -1,3 +1,5 @@
+import leafImage from '../assets/leaf.png';
+
 const content = document.querySelector('#content');
 
 const restoNameF = document.createElement('h1');
@@ -5,7 +7,7 @@ const leafImgF = document.createElement('img');
 restoNameF.setAttribute('id', 'restonameF');
 leafImgF.setAttribute('id', 'leafF');
 restoNameF.textContent = 'PureHut';
-leafImgF.src = '../assets/leaf.png';
+leafImgF.src =  leafImage;
 
 export default function footerLoad() {
     const footerWrap = document.createElement('div');

@@ -5,6 +5,7 @@ import homePage from './pages/homepage';
 import contactPage from './pages/contactpage';
 import promoPage from './pages/promopage';
 import footerLoad from './pages/footerLoad';
+import leafImage from './assets/leaf.png';
 
 const content = document.querySelector('#content');
 
@@ -34,7 +35,7 @@ menuNav.textContent = 'Menu';
 contactNav.textContent = 'Contact';
 promoNav.textContent = 'Promo';
 restoName.textContent = 'PureHut';
-leafImg.src = '../assets/leaf.png';
+leafImg.src = leafImage
 
 homeNav.setAttribute('href', '#home');
 menuNav.setAttribute('href', '#menu');

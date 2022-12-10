@@ -456,3 +456,10 @@ h2 {
     font-family: poppinsT;
     text-decoration: underline;
 }
+
+.beveragePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
