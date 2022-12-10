@@ -1,5 +1,3 @@
-const content = document.querySelector('#content');
-
 export default function breakfastMenu() {
     const breakfastDiv = document.createElement('div');
 

@@ -1,5 +1,5 @@
 import breakfastMenu from "./menu-sub/breakfast";
-import footerLoad from "./footerLoad";
+import mainMenu from "./menu-sub/mainmenu";
 
 const content = document.querySelector('#content')
 
@@ -41,10 +41,10 @@ export default function menuPage() {
 
     menuTitle.textContent = 'MENU';
     titleDesc.innerHTML = 'For delivery in central areas, minimum order $50 with delivery fee applicable. <span>Free delivery for orders $100 or above. </span><br/><br/>For further information about ingredients, orders, delivery, or anything, don\'t hesitate to contact us.';
-    breakfastLink.textContent = 'All-day Breakfast';
+    breakfastLink.textContent = 'All Day Breakfast';
     mainLink.textContent = 'Main';
     snacksLink.textContent = 'Snacks';
-    drinkLink.textContent = 'Drinks';
+    drinkLink.textContent = 'Beverages';
 
     menupage.appendChild(titleWrap);
     menupage.appendChild(menuCategory);
@@ -54,10 +54,36 @@ export default function menuPage() {
 
     /* SUB-MENU FUCTIONALITIES */
 
+    const activeMealNav = document.querySelectorAll('#menuCategory a');
+
+    activeMealNav.forEach((mealNav) => {
+        mealNav.addEventListener('click', (e) => {
+            activeMealNav.forEach((unactive) => {
+                e.target.classList.add('active');
+                unactive.classList.remove('active');
+            })
+        })
+
+        if (mealNav.classList.contains('active')) {
+            mealNav.style.color = 'var(--color-4)';
+        } else if (!mealNav.classList.contains('active')) {
+            mealNav.style.color = 'var(--color-6)';
+        }
+    })
+
     function breakfastLoad() {
-        breakfastLink.style.color = 'var(--color-4)'
         menuDiv.appendChild(breakfastMenu());
     }
 
     breakfastLoad();
+
+    breakfastLink.addEventListener('click', () => {
+        menuDiv.innerHTML = '';
+        menuDiv.appendChild(breakfastMenu());
+    })
+
+    mainLink.addEventListener('click', () => {
+        menuDiv.innerHTML = '';
+        menuDiv.appendChild(mainMenu());
+    })
 }

@@ -60,7 +60,7 @@ navbar.appendChild(leafImg);
 function navbarLoad() {
     content.appendChild(navbar);
 
-    const activeNav = document.querySelectorAll('a');
+    const activeNav = document.querySelectorAll('#switchdiv a');
 
     activeNav.forEach((nav) => {
         nav.addEventListener('click', (e) => {
@@ -108,6 +108,7 @@ function navbarLoad() {
         content.innerHTML = '';
         navbarLoad();
         homePage();
+        footerLoad();
     })
 
     contact.addEventListener('click', () => {
