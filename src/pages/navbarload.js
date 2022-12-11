@@ -114,6 +114,7 @@ export default function navbarLoad() {
         content.innerHTML = '';
         navbarLoad();
         contactPage();
+        footerLoad();
     })
 
     promo.addEventListener('click', (e) => {

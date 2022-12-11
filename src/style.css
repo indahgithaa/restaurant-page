@@ -103,6 +103,10 @@ body::-webkit-scrollbar {
     margin-right: 5px;
     color: var(--color-4);
     cursor: pointer;
+    -webkit-text-stroke: 0.1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    transform: scale(1.1) translate3d(0,0,0);
+    backface-visibility: hidden;
 }
 
 #leaf {
@@ -400,6 +404,7 @@ body::-webkit-scrollbar {
     width: 600px;
     margin-left: 40px;
     font-family: poppinsT;
+    text-align: justify;
 }
 
 #titleDesc span {
@@ -479,13 +484,14 @@ h2 {
 }
 
 #contactdiv {
-    width: 80%;
-    height: 70%;
+    width: 900px;
+    height: 400px;
     background-color: white;
     padding: 30px;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 4fr;
+    box-shadow: 8px 8px 5px rgba(40,84,48,0.51);
 }
 
 form {
@@ -496,13 +502,13 @@ form {
 input {
     border-radius: 5px;
     border: 0;
-    height: 5vh;
+    height: 30px;
     background-color: var(--color-7);
     outline: none;
 }
 
 textarea {
-    height: 30vh;
+    height: 150px;
     border-radius: 5px;
     border: 0;
     background-color: var(--color-7);
@@ -510,19 +516,37 @@ textarea {
 }
 
 label {
-    margin: 1vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #sendBtn {
     margin: 0 auto;
-    margin-top: 3vh;
-    width: 100px;
-    height: 40px;
+    margin-top: 20px;
+    width: 90px;
+    height: 30px;
     border: 0;
-    font-size: 20px;
+    font-size: 16px;
     background-color: var(--color-3);
     font-family: poppinsM;
     color: white;
     border-radius: 10px;
     box-shadow: 4px 4px 5px rgba(40,84,48,0.51);
+}
+
+#infoDiv {
+    padding-left: 50px;
+}
+
+#ctcUs {
+    font-size: 30px;
+    font-family: poppinsM;
+    margin-top: 0;
+    color: var(--color-4);
+}
+
+#ctcUsDesc {
+    color: gray;
+    text-align: justify;
+    margin-top: -20px;
 }

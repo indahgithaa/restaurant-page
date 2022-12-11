@@ -42,7 +42,7 @@ export default function menuPage() {
     menuDiv.setAttribute('id', 'menuDiv');
 
     menuTitle.textContent = 'MENU';
-    titleDesc.innerHTML = 'For delivery in central areas, minimum order $50 with delivery fee applicable. <span>Free delivery for orders $100 or above. </span><br/><br/>For further information about ingredients, orders, delivery, or anything, don\'t hesitate to contact us.';
+    titleDesc.innerHTML = 'For delivery in central areas, minimum order $50 with delivery fee applicable. <span>Free delivery for orders $100 or above.  </span>Please WhatsApp us with our phone number at least 3 hours before delivery time.<br/><br/>For further information about ingredients, orders, delivery, or anything, don\'t hesitate to contact us.';
     breakfastLink.textContent = 'All Day Breakfast';
     mainLink.textContent = 'Main';
     snacksLink.textContent = 'Snacks';
