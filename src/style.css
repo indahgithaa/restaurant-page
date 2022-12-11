@@ -5,6 +5,7 @@
     --color-4: #285430;
     --color-5: #042c35;
     --color-6: #0E1111;
+    --color-7: #edf0e8;
 }
 
 @font-face {
@@ -464,4 +465,64 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+/* CONTACT PAGE */
+
+.contactpage {
+    background-color: var(--color-2);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactdiv {
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    border: 0;
+    height: 5vh;
+    background-color: var(--color-7);
+    outline: none;
+}
+
+textarea {
+    height: 30vh;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--color-7);
+    outline: none;
+}
+
+label {
+    margin: 1vh;
+}
+
+#sendBtn {
+    margin: 0 auto;
+    margin-top: 3vh;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    font-size: 20px;
+    background-color: var(--color-3);
+    font-family: poppinsM;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(40,84,48,0.51);
 }

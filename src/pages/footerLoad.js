@@ -47,7 +47,7 @@ export default function footerLoad() {
         new Source('Louis Hansel, Unsplash'),
         new Source('Dylan Nolte, Unsplash'),
         new Source('Eiliv Aceron, Unsplash'),
-        new Source('Icons from Flaticon')
+        new Source('Those Icons, Flaticon')
     ]
 
     footerCard1.appendChild(restoNameF);

@@ -113,6 +113,7 @@ export default function navbarLoad() {
     contact.addEventListener('click', () => {
         content.innerHTML = '';
         navbarLoad();
+        contactPage();
     })
 
     promo.addEventListener('click', (e) => {
