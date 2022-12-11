@@ -35,7 +35,7 @@ menuNav.textContent = 'Menu';
 contactNav.textContent = 'Contact';
 promoNav.textContent = 'Promo';
 restoName.textContent = 'PureHut';
-leafImg.src = leafImage
+leafImg.src = leafImage;
 
 homeNav.setAttribute('href', '#home');
 menuNav.setAttribute('href', '#menu');
