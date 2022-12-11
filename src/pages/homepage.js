@@ -1,3 +1,8 @@
+import navbarLoad from './navbarload';
+import menuPage from './menupage';
+import footerLoad from './footerLoad';
+import { homeNav } from './navbarload';
+import { menuNav } from './navbarload';
 import secondImage from '../assets/food1-fix.png'
 import icon1 from '../assets/checked.png';
 import icon2 from '../assets/knife-and-fork.png';
@@ -12,7 +17,10 @@ const content = document.querySelector('#content');
 export default function homePage() {
 
     const homepage = document.createElement('div')
+
     homepage.setAttribute('class', 'homepage');
+
+    const activeNav = document.querySelectorAll('#switchdiv a');
 
     /* FIRST PAGE */
     const welcomingWrap = document.createElement('div');
@@ -28,6 +36,15 @@ export default function homePage() {
 
     welcomingWrap.appendChild(welcoming);
     welcomingWrap.appendChild(exploreBtn);
+
+    exploreBtn.addEventListener('click', () => {
+        content.innerHTML = '';
+        navbarLoad();
+        homeNav.style.color = 'var(--color-6)';
+        menuNav.style.color = 'var(--color-3)';
+        menuPage();
+        footerLoad();
+    })
 
     /* SECOND PAGE */
     const secondHome = document.createElement('div');
