@@ -2,6 +2,9 @@ import breakfastMenu from "./menu-sub/breakfast";
 import mainMenu from "./menu-sub/mainmenu";
 import snacksMenu from "./menu-sub/snack";
 import beveragesMenu from "./menu-sub/beverages";
+import navbarLoad from "./navbarload";
+import contactPage from "./contactpage";
+import { contactNav } from "./navbarload";
 
 const content = document.querySelector('#content')
 
@@ -42,7 +45,7 @@ export default function menuPage() {
     menuDiv.setAttribute('id', 'menuDiv');
 
     menuTitle.textContent = 'MENU';
-    titleDesc.innerHTML = 'For delivery in central areas, minimum order of $30 with an additional delivery fee (start from $3). <span>Free delivery for orders above $80. </span>Please WhatsApp us at least three hours before delivery time. <br/><br/>For further information about ingredients, orders, delivery, or anything, don\'t hesitate to contact us.';
+    titleDesc.innerHTML = `For delivery in central areas, minimum order of $30 with an additional delivery fee (start from $3). <span>Free delivery for orders above $80. </span>Please WhatsApp us at least three hours before delivery time. <br/><br/>For further information about ingredients, orders, delivery, or anything, don\'t hesitate to `+ "<a href='#contact' id='ctcMenu'>contact us.</a>"
     breakfastLink.textContent = 'All Day Breakfast';
     mainLink.textContent = 'Main';
     snacksLink.textContent = 'Snacks';
@@ -94,4 +97,11 @@ export default function menuPage() {
         menuDiv.innerHTML = '';
         menuDiv.appendChild(beveragesMenu());
     })
+
+    const contactUs = document.querySelector('#ctcMenu');
+    
+    contactUs.onclick = (e) => {
+        e.preventDefault();
+        contactNav.click();
+    }
 }

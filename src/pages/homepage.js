@@ -20,8 +20,6 @@ export default function homePage() {
 
     homepage.setAttribute('class', 'homepage');
 
-    const activeNav = document.querySelectorAll('#switchdiv a');
-
     /* FIRST PAGE */
     const welcomingWrap = document.createElement('div');
     const welcoming = document.createElement('h1');
@@ -38,6 +36,7 @@ export default function homePage() {
     welcomingWrap.appendChild(exploreBtn);
 
     exploreBtn.addEventListener('click', () => {
+        window.scrollTo(0,0);
         content.innerHTML = '';
         navbarLoad();
         homeNav.style.color = 'var(--color-6)';

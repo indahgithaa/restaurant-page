@@ -582,3 +582,13 @@ label {
 #belowIcon img {
     margin: 10px;
 }
+
+#ctcMenu {
+    text-decoration: underline;
+    color: var(--color-4);
+}
+
+#ctcMenu:visited {
+    text-decoration: underline;
+    color: var(--color-4);
+}

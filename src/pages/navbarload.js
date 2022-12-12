@@ -119,4 +119,5 @@ export default function navbarLoad() {
 export {
     menuNav,
     homeNav,
+    contactNav,
 }
