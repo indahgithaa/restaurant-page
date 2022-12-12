@@ -1,7 +1,6 @@
 import menuPage from './menupage';
 import homePage from './homepage';
 import contactPage from './contactpage';
-import promoPage from './promopage';
 import footerLoad from './footerLoad';
 import leafImage from '../assets/leaf.png';
 
@@ -11,13 +10,11 @@ const navbar = document.createElement('ul');
 const home = document.createElement('li');
 const menu = document.createElement('li');
 const contact = document.createElement('li');
-const promo = document.createElement('li');
 const resto = document.createElement('li');
 
 const homeNav = document.createElement('a');
 const menuNav = document.createElement('a');
 const contactNav = document.createElement('a');
-const promoNav = document.createElement('a');
 const restoName = document.createElement('h1');
 const leafImg = document.createElement('img');
 
@@ -29,26 +26,22 @@ leafImg.setAttribute('id', 'leaf');
 homeNav.textContent = 'Home';
 menuNav.textContent = 'Menu';
 contactNav.textContent = 'Contact';
-promoNav.textContent = 'Promo';
 restoName.textContent = 'PureHut';
 leafImg.src = leafImage;
 
 homeNav.setAttribute('href', '#home');
 menuNav.setAttribute('href', '#menu');
-contactNav.setAttribute('href', '#contact');
-promoNav.setAttribute('href', '#promo');
+contactNav.setAttribute('href', '#contact');;
 restoName.setAttribute('href', '#home');
 
 home.appendChild(homeNav);
 menu.appendChild(menuNav);
 contact.appendChild(contactNav);
-promo.appendChild(promoNav);
 resto.appendChild(restoName)
 
 switchDiv.appendChild(home);
 switchDiv.appendChild(menu);
 switchDiv.appendChild(contact);
-switchDiv.appendChild(promo);
 
 navbar.appendChild(switchDiv)
 navbar.appendChild(restoName);
@@ -97,6 +90,7 @@ export default function navbarLoad() {
     })
 
     menu.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         content.innerHTML = '';
         navbarLoad();
         menuPage();
@@ -104,23 +98,21 @@ export default function navbarLoad() {
     })
 
     home.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         content.innerHTML = '';
         navbarLoad();
         homePage();
         footerLoad();
     })
 
-    contact.addEventListener('click', () => {
+    contact.addEventListener('click', (e) => {
+        window.scrollTo(0, 0);
+        e.preventDefault();
         content.innerHTML = '';
         navbarLoad();
+        contactNav.style.color = 'var(--color-3)';
         contactPage();
         footerLoad();
-    })
-
-    promo.addEventListener('click', (e) => {
-        e.target.classList.add('active');
-        content.innerHTML = '';
-        navbarLoad();
     })
 }
 
