@@ -1,6 +1,3 @@
-/*!*****************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
-  \*****************************************************************/
 :root {
     --color-1: #E5D9B6;
     --color-2: #A4BE7B;
@@ -8,26 +5,27 @@
     --color-4: #285430;
     --color-5: #042c35;
     --color-6: #0E1111;
+    --color-7: #edf0e8;
 }
 
 @font-face {
     font-family: poppinsB;
-    src: url(img/Poppins-Bold);
+    src: url(img/Poppins-Bold-cdb29a5d7ccf57ff05a3);
 }
 
 @font-face {
     font-family: poppinsT;
-    src: url(img/Poppins-Light);
+    src: url(img/Poppins-Light-7641a0f76ca9ef6c252c);
 }
 
 @font-face {
     font-family: poppinsM;
-    src: url(img/Poppins-Medium);
+    src: url(img/Poppins-Medium-673ed42382ab264e0bf5);
 }
 
 @font-face {
     font-family: poppinsM2;
-    src: url(img/Poppins-SemiBold);
+    src: url(img/Poppins-SemiBold-ac8d04b620e54be9b0f0);
 }
 
 * {
@@ -92,7 +90,9 @@ body::-webkit-scrollbar {
     color: var(--color-6);
     transition: all ease 0.3s;
     -webkit-text-stroke: 0.1px;
-    -webkit-transform: rotate(-0.0000000001deg);
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    transform: scale(1.1) translate3d(0,0,0);
+    backface-visibility: hidden;
 }
 
 #restoname { 
@@ -103,6 +103,10 @@ body::-webkit-scrollbar {
     margin-right: 5px;
     color: var(--color-4);
     cursor: pointer;
+    -webkit-text-stroke: 0.1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    transform: scale(1.1) translate3d(0,0,0);
+    backface-visibility: hidden;
 }
 
 #leaf {
@@ -119,7 +123,7 @@ body::-webkit-scrollbar {
 
 
 #welcomingWrap {
-    background-image: url(img/cover);
+    background-image: url(img/cover-8e379a85e0cfab3e865f);
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -264,7 +268,7 @@ body::-webkit-scrollbar {
 .fourthHome {
     width: 100%;
     height: 100vh;
-    background-image: url(img/background5);
+    background-image: url(img/background5-1a201fdd01dd19ab0795);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -400,6 +404,7 @@ body::-webkit-scrollbar {
     width: 600px;
     margin-left: 40px;
     font-family: poppinsT;
+    text-align: justify;
 }
 
 #titleDesc span {
@@ -465,4 +470,125 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+/* CONTACT PAGE */
+
+.contactpage {
+    background-color: var(--color-2);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactdiv {
+    width: 900px;
+    height: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    box-shadow: 8px 8px 5px rgba(40,84,48,0.51);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    border: 0;
+    height: 30px;
+    background-color: var(--color-7);
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--color-7);
+    outline: none;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#sendBtn {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90px;
+    height: 30px;
+    border: 0;
+    font-size: 16px;
+    background-color: var(--color-3);
+    font-family: poppinsM;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(40,84,48,0.51);
+    cursor: pointer;
+}
+
+#infoDiv {
+    padding-left: 50px;
+}
+
+#ctcUs {
+    font-size: 30px;
+    font-family: poppinsM;
+    margin-top: 0;
+    color: var(--color-4);
+}
+
+#ctcUsDesc {
+    color: gray;
+    text-align: justify;
+    margin-top: -20px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#contact img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#contact p {
+    font-family: poppinsM;
+    color: var(--color-4);
+}
+
+#belowIcon {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+#belowIcon img {
+    margin: 10px;
+}
+
+#ctcMenu {
+    text-decoration: underline;
+    color: var(--color-4);
+}
+
+#ctcMenu:visited {
+    text-decoration: underline;
+    color: var(--color-4);
 }
