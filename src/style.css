@@ -532,6 +532,7 @@ label {
     color: white;
     border-radius: 10px;
     box-shadow: 4px 4px 5px rgba(40,84,48,0.51);
+    cursor: pointer;
 }
 
 #infoDiv {
@@ -549,4 +550,35 @@ label {
     color: gray;
     text-align: justify;
     margin-top: -20px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#contact img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#contact p {
+    font-family: poppinsM;
+    color: var(--color-4);
+}
+
+#belowIcon {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+#belowIcon img {
+    margin: 10px;
 }
