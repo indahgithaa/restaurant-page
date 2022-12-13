@@ -2,8 +2,6 @@ import breakfastMenu from "./menu-sub/breakfast";
 import mainMenu from "./menu-sub/mainmenu";
 import snacksMenu from "./menu-sub/snack";
 import beveragesMenu from "./menu-sub/beverages";
-import navbarLoad from "./navbarload";
-import contactPage from "./contactpage";
 import { contactNav } from "./navbarload";
 
 const content = document.querySelector('#content')

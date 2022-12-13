@@ -1,5 +1,4 @@
 import menuPage from './menupage';
-import homePage from './homepage';
 import contactPage from './contactpage';
 import footerLoad from './footerLoad';
 import leafImage from '../assets/leaf.png';
@@ -46,6 +45,8 @@ switchDiv.appendChild(contact);
 navbar.appendChild(switchDiv)
 navbar.appendChild(restoName);
 navbar.appendChild(leafImg);
+
+navbar.classList.add('hiddenY');
 
 export default function navbarLoad() {
     const content = document.querySelector('#content');
@@ -98,11 +99,7 @@ export default function navbarLoad() {
     })
 
     home.addEventListener('click', () => {
-        window.scrollTo(0, 0);
-        content.innerHTML = '';
-        navbarLoad();
-        homePage();
-        footerLoad();
+        window.location.reload();
     })
 
     contact.addEventListener('click', (e) => {

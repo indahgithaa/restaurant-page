@@ -239,6 +239,18 @@ body::-webkit-scrollbar {
     margin: auto;
 }
 
+#card:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+#card:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+#card:nth-child(4) {
+    transition-delay: 600ms;
+}
+
 #icon {
     width: 30px;
     height: 30px;
@@ -291,6 +303,14 @@ body::-webkit-scrollbar {
     height: 200px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+#foodCard:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+#foodCard:nth-child(3) {
+    transition-delay: 400ms;
 }
 
 #foodCard {
@@ -592,3 +612,46 @@ label {
     text-decoration: underline;
     color: var(--color-4);
 }
+
+.hiddenX {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.7s;
+}
+
+.hiddenXright {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 0.7s;
+}
+
+.showX {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hiddenY {
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateY(-100%);
+    transition: all 0.3s;
+}
+
+.hiddenYUp {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+
+.showY {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+    .hiddenX, .hiddenY, .hiddenYUp {
+      transition: none;
+    }
+  }

@@ -1,7 +1,3 @@
-import navbarLoad from './navbarload';
-import menuPage from './menupage';
-import footerLoad from './footerLoad';
-import { homeNav } from './navbarload';
 import { menuNav } from './navbarload';
 import secondImage from '../assets/food1-fix.png'
 import icon1 from '../assets/checked.png';
@@ -35,14 +31,12 @@ export default function homePage() {
     welcomingWrap.appendChild(welcoming);
     welcomingWrap.appendChild(exploreBtn);
 
+    welcoming.classList.add('hiddenXright');
+    exploreBtn.classList.add('hiddenYUp');
+
     exploreBtn.addEventListener('click', () => {
         window.scrollTo(0,0);
-        content.innerHTML = '';
-        navbarLoad();
-        homeNav.style.color = 'var(--color-6)';
-        menuNav.style.color = 'var(--color-3)';
-        menuPage();
-        footerLoad();
+        menuNav.click();
     })
 
     /* SECOND PAGE */
@@ -61,6 +55,9 @@ export default function homePage() {
     secondTitle.innerHTML = 'Back to the <span>Wholeness</span>';
     secondCaptions.innerHTML = 'The food we put in our body can impacts our health and well-being. It plays a big role in our lives. <br/><br/> We\'re committed to promoting healthy diets based on whole foods with balanced nutritions for your body and supporting you to maintain your healthy lifestyle.'
 
+    secondTitle.classList.add('hiddenY');
+    secondCaptions.classList.add('hiddenX')
+
     captionWrap.appendChild(secondTitle);
     captionWrap.appendChild(secondCaptions);
     secondHome.appendChild(captionWrap);
@@ -76,6 +73,8 @@ export default function homePage() {
     cardWrap.setAttribute('id', 'cardWrap');
 
     thirdTitle.innerHTML = 'WHAT WE <span> OFFER </span>'
+
+    thirdTitle.classList.add('hiddenY');
 
     thirdHome.appendChild(thirdTitle);
 
@@ -97,8 +96,10 @@ export default function homePage() {
         card.appendChild(icon);
         card.appendChild(headings);
         card.appendChild(details);
+        
+        card.classList.add('hiddenYUp')
 
-        cardWrap.appendChild(card)
+        cardWrap.appendChild(card);
         thirdHome.appendChild(cardWrap);
     }
 
@@ -123,6 +124,8 @@ export default function homePage() {
 
     fourthTitle.innerHTML = 'OUR <span> STAR </span> MENU';
 
+    fourthTitle.classList.add('hiddenY');
+
     fourtHome.appendChild(fourthTitle);
 
     function createFoodCard(menu) {
@@ -144,6 +147,9 @@ export default function homePage() {
         foodCard.appendChild(foodPic);
         foodCard.appendChild(foodName);
         foodCard.appendChild(foodPrice);
+
+        foodCard.classList.add('hiddenX');
+
         foodCardWrap.appendChild(foodCard);
         fourtHome.appendChild(foodCardWrap);
     }
@@ -164,6 +170,34 @@ export default function homePage() {
     homepage.appendChild(fourtHome);
 
     content.appendChild(homepage);
+
+    const observerX = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showX');
+            }
+        })
+    })
+
+    const observerY = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showY');
+            }
+        })
+    })
+
+    const hiddenDivX = document.querySelectorAll('.hiddenX');
+    const hiddenDivXright = document.querySelectorAll('.hiddenXright');
+    const hiddenDivY = document.querySelectorAll('.hiddenY');
+    const hiddenDivYUp = document.querySelectorAll('.hiddenYUp');
+
+    hiddenDivX.forEach((hDiv) => observerX.observe(hDiv));
+    hiddenDivXright.forEach((hDiv) => observerX.observe(hDiv));
+    hiddenDivY.forEach((hDiv) => observerY.observe(hDiv));
+    hiddenDivYUp.forEach((hDiv) => observerY.observe(hDiv));
 }
 
 class Offer {
