@@ -2,6 +2,7 @@ import menuPage from './menupage';
 import contactPage from './contactpage';
 import footerLoad from './footerLoad';
 import leafImage from '../assets/leaf.png';
+import navIconImport from '../assets/menu-bar.png';
 
 const switchDiv = document.createElement('div');
 const navbar = document.createElement('ul');
@@ -16,11 +17,14 @@ const menuNav = document.createElement('a');
 const contactNav = document.createElement('a');
 const restoName = document.createElement('h1');
 const leafImg = document.createElement('img');
+const navIconImg = document.createElement('img');
 
 navbar.setAttribute('class', 'navbar-container');
 switchDiv.setAttribute('id', 'switchdiv');
 restoName.setAttribute('id', 'restoname');
 leafImg.setAttribute('id', 'leaf');
+navIconImg.setAttribute('id', 'navIconImg');
+navIconImg.src = navIconImport;
 
 homeNav.textContent = 'Home';
 menuNav.textContent = 'Menu';
@@ -41,8 +45,9 @@ resto.appendChild(restoName)
 switchDiv.appendChild(home);
 switchDiv.appendChild(menu);
 switchDiv.appendChild(contact);
+navbar.appendChild(navIconImg)
 
-navbar.appendChild(switchDiv)
+navbar.appendChild(switchDiv);
 navbar.appendChild(restoName);
 navbar.appendChild(leafImg);
 

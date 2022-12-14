@@ -48,7 +48,6 @@ body::-webkit-scrollbar {
     flex-direction: row;  
     justify-content: center;
     align-items: center;
-    position: absolute; 
     width: 100%;
     height: 80px;
     z-index: 3;
@@ -63,18 +62,20 @@ body::-webkit-scrollbar {
     flex-direction: row;  
     justify-content: center;
     align-items: center;
-    position: absolute; 
     width: auto;
     padding: 0;
-    height: auto;
+    height: 80px;
+    margin-left: 5%;
 }
 
 #switchdiv li {
     list-style: none;
-    margin: 20px;
     font-size: large;
-    height: auto;
-    display: block;
+}
+
+#switchdiv li:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #switchdiv li:hover {
@@ -84,15 +85,14 @@ body::-webkit-scrollbar {
 }
 
 #switchdiv li a {
-    position: relative;
     text-decoration: none;
     padding: 10px;
-    color: var(--color-6);
     transition: all ease 0.3s;
     -webkit-text-stroke: 0.1px;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
     transform: scale(1.1) translate3d(0,0,0);
     backface-visibility: hidden;
+    color: var(--color-7);
 }
 
 #restoname { 
@@ -112,7 +112,8 @@ body::-webkit-scrollbar {
 #leaf {
     width: 15px;
     height: 15px;
-    margin-right: 10%;
+    margin-right: 5%;
+    z-index: 2;
 }
 
 /* --- HOMEPAGE --- */
@@ -123,7 +124,7 @@ body::-webkit-scrollbar {
 
 
 #welcomingWrap {
-    background-image: url(./assets/cover.jpg);
+    background-image: url(./assets/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg);
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -142,12 +143,12 @@ body::-webkit-scrollbar {
     font-size: 3em;
     margin-top: 10px;
     width: 35%;
-    text-align: right;
-    margin-right: 5%;
+    text-align: left;
+    margin-left: 5%;
     font-family: poppinsB;
     line-height: 1.5;
-    color: #0E1111;
-    margin-left: auto;
+    color: var(--color-6);
+    margin-right: auto;
 }
 
 #expBtn {
@@ -156,10 +157,11 @@ body::-webkit-scrollbar {
     border: 0;
     background-color: var(--color-4);
     color: white;
-    margin-right: 5%;
+    margin-left: 5%;
     border-radius: 20px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
     cursor: pointer;
+    margin-right: auto;
 }
 
 #expBtn:hover {
@@ -650,8 +652,101 @@ label {
     transform: translateY(0);
 }
 
+#navIconImg {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
 @media (prefers-reduced-motion) {
-    .hiddenX, .hiddenY, .hiddenYUp {
+    .hiddenX, .hiddenY, .hiddenYUp, .hiddenXright {
       transition: none;
     }
   }
+
+@media only screen and (max-width: 840px) {
+    #switchdiv {
+        background-color: white;
+        background-size: cover;
+        position: fixed;
+        width: 100%;
+        height: 200vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    #navIconImg {
+        margin: 0;
+    }
+
+    .navbar-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .secondHome {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #captionWrap {
+        width: fit-content;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #thirdTitle {
+        width: fit-content;
+    }
+    #card {
+        width: 90vw;
+    }
+
+    #cardWrap {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #foodCard {
+        width: 50px;
+    }
+
+    #foodPic {
+        width: 50px;
+    }
+
+    #foodCardWrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footerWrap {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    #switchdiv li:nth-child(1) {
+        margin-top: 100px;
+    }
+
+    #switchdiv li:nth-child(2) {
+    }
+
+    #switchdiv li:nth-child(3) {
+        margin-top: auto;
+        margin-bottom: 50px;
+    }
+
+    #navIconImg {
+        display: block;
+        position: absolute;
+        float: left;
+        left: 10px;
+    }
+}
