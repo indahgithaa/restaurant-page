@@ -44,7 +44,7 @@ export default function footerLoad() {
     }
 
     const arr = [
-        new Source('Louis Hansel, Unsplash'),
+        new Source('Hermes Rivera, Unsplash'),
         new Source('Dylan Nolte, Unsplash'),
         new Source('Eiliv Aceron, Unsplash'),
         new Source('Those Icons, Flaticon')
