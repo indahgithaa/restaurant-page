@@ -688,8 +688,26 @@ label {
         display: none;
     }
 
+    #switchdiv {
+        margin-top: 500px;
+    }
+
+    #switchdiv li {
+        font-size: 20px;
+    }
+
+    #switchdiv li:hover {
+        border: none;
+    }
+
+    #switchdiv li:nth-child(2) {
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+
     #navIconImg {
         display: block;
+        z-index: 4;
         position: absolute;
         float: left;
         left: 10px;
