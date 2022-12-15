@@ -664,6 +664,8 @@ label {
     }
   }
 
+
+
 @media only screen and (max-width: 840px) {
     #switchdiv {
         background-color: white;
@@ -681,6 +683,20 @@ label {
 
     #navIconImg {
         margin: 0;
+    }
+
+    #welcomingWrap {
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position:center;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    #welcoming {
+        font-size: 2em;
+        width: 55%;
+        line-height: 1.5;
     }
 
     .navbar-container {
@@ -750,3 +766,14 @@ label {
         left: 10px;
     }
 }
+
+@media only screen and (max-width: 365px) {
+    #welcoming {
+        font-size: 1.6em;
+        font-family: poppinsM;
+    }
+
+    #expBtn {
+        width: 150px;
+    }
+} 
