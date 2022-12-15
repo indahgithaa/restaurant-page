@@ -169,6 +169,8 @@ body::-webkit-scrollbar {
     background-color: var(--color-3);
 }
 
+/* SECOND HOMEPAGE */
+
 .secondHome {
     height: 80vh;
     width: 100%;
@@ -667,6 +669,11 @@ label {
 
 
 @media only screen and (max-width: 840px) {
+    .navbar-container {
+        width: 100%;
+        margin: 0;
+    }
+
     #switchdiv {
         background-color: white;
         background-size: cover;
@@ -699,14 +706,31 @@ label {
         line-height: 1.5;
     }
 
-    .navbar-container {
-        width: 100%;
-        margin: 0;
-    }
+    /* SECOND HOMEPAGE */
 
     .secondHome {
         display: flex;
         flex-direction: column;
+        height: 80vh;
+    }
+
+    #secondImg {
+        width: 200px;
+
+    }
+
+    #captionWrap {
+        text-align: justify;
+    }
+
+    #captionWrap h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #captionWrap p {
+        margin: 25px;
+        font-size: 15px;
     }
 
     #captionWrap {
@@ -715,11 +739,39 @@ label {
         margin-left: 0;
     }
 
-    #thirdTitle {
-        width: fit-content;
+    /* THIRD PAGE */
+
+    .thirdHome {
+        height: 100vh;
+        width: 100%;
     }
+
+    #cardWrap {
+        margin-top: calc(-1% - 20px);
+    }
+
+    #headings {
+        font-size: 1.2em;
+    }
+
+    #cardWrap p {
+        font-size: 0.7rem;
+    }
+
+    #thirdTitle {
+        width: 100%;
+        font-size: 1.6em;
+        text-align: center;
+    }
+
     #card {
-        width: 90vw;
+        width: 70vw;
+        margin-top: 20px;
+    }
+
+    #icon {
+        width: 17px;
+        height: 17px;
     }
 
     #cardWrap {
