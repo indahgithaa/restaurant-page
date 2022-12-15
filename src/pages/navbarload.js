@@ -91,9 +91,27 @@ export default function navbarLoad() {
         }
     })
 
+    /* RESPONSIVE NAVBAR */
+
+    const responsiveVw = window.matchMedia('(max-width: 840px)');
+
+    function navResp() {
+        navIconImg.addEventListener('click', () => {
+            if (switchDiv.style.display == 'flex') {
+                switchDiv.style.display = 'none';
+            } else {
+                switchDiv.style.display = 'flex';
+            }
+        })
+    }
+
     restoName.addEventListener('click', () => {
         window.location.reload();
     })
+
+    if (responsiveVw.matches) {
+        navResp();
+    }
 
     menu.addEventListener('click', () => {
         window.scrollTo(0, 0);
@@ -101,6 +119,11 @@ export default function navbarLoad() {
         navbarLoad();
         menuPage();
         footerLoad();
+
+        if (responsiveVw.matches) {
+            switchDiv.style.display = 'none';
+            navResp();
+        }
     })
 
     home.addEventListener('click', () => {
@@ -115,6 +138,11 @@ export default function navbarLoad() {
         contactNav.style.color = 'var(--color-3)';
         contactPage();
         footerLoad();
+
+        if (responsiveVw.matches) {
+            switchDiv.style.display = 'none';
+            navResp();
+        }
     })
 }
 
