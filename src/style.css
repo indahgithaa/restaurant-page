@@ -730,12 +730,13 @@ label {
     .secondHome {
         display: flex;
         flex-direction: column;
-        height: 80vh;
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     #secondImg {
         width: 200px;
-
     }
 
     #captionWrap {
@@ -954,6 +955,24 @@ label {
     #foodMenuDesc {
         text-align: justify;
     }
+
+    .beveragePage {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .beveragePage h2 {
+        font-size: 1.2em;
+        font-family: poppinsM;
+    }
+
+    /* CONTACT PAGE */
+
+    #contactdiv {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
 
 }
 

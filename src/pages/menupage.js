@@ -89,7 +89,7 @@ export default function menuPage() {
         menuDiv.innerHTML = '';
         menuDiv.appendChild(snacksMenu());
     })
-
+    
     drinkLink.addEventListener('click', () => {
         drinkLink.style.color = 'var(--color-4)';
         menuDiv.innerHTML = '';

@@ -76,7 +76,7 @@ export default function beveragesMenu() {
     beveragePage.appendChild(teaDiv);
     beveragePage.appendChild(juiceDiv);
 
-    beveragePage.classList.add('beveragePage')
+    beveragePage.classList.add('beveragePage');
 
     return beveragePage;
 
