@@ -104,10 +104,11 @@ export default function homePage() {
     }
 
     const arr = [
-        new Offer(icon4, '100% Whole Foods', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
-        new Offer(icon3, 'Homemade Ingredients', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
-        new Offer(icon1, 'Customable Menu', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. '),
-        new Offer(icon2, 'All Diets-Friendly', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna vitae libero sagittis elementum. Phasellus ac molestie nibh. Aliquam ultricies magna a mattis pretium. Nullam in ultrices erat. Nulla a tristique purus. ')
+        new Offer(icon4, '100% Whole Foods', 'We\'re all about promoting a whole foods lifestyle. That means eating natural, limiting processed foods, avoiding additives and excess sugar in daily basis. We never add any funky additives and preservatives in our food — we serve foods as natural and healthy as possible.'),
+        new Offer(icon2, 'All Diets-Friendly', `Do you have special dietary needs, like a vegan diet? Are you looking for halal menu? Fear not, we've got you covered. We make sure our real foods are safe for everyone, and we even provide important information about each dish in our menu.`),
+        new Offer(icon3, 'Homemade Ingredients', 'From traditional seasonings, homemade sauces and jams, to our authentic noodles and pasta made from raw and organic materials, we are always dedicated to making our food using traditional methods and avoiding industrial agriculture.'),
+        new Offer(icon1, 'Customable Menu', `If you're intolerant to gluten, allergic to certain foods, avoiding garlic, onions and some kinds of ingredients, we are ready to provide you with safe options. Don't hesitate to let us know if you have any special requests for your food! `),
+
     ];
 
     for (let i = 0; i < arr.length; i++) {
