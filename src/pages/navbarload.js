@@ -97,10 +97,10 @@ export default function navbarLoad() {
 
     function navResp() {
         navIconImg.addEventListener('click', () => {
-            if (switchDiv.style.display == 'flex') {
-                switchDiv.style.display = 'none';
+            if (switchDiv.style.marginLeft == '0px') {
+                switchDiv.style.marginLeft = '-200%'
             } else {
-                switchDiv.style.display = 'flex';
+                switchDiv.style.marginLeft = '0px';
             }
         })
     }
@@ -117,11 +117,11 @@ export default function navbarLoad() {
         window.scrollTo(0, 0);
         content.innerHTML = '';
         navbarLoad();
-        menuPage();
+        menuPage(); 
         footerLoad();
 
         if (responsiveVw.matches) {
-            switchDiv.style.display = 'none';
+            switchDiv.style.marginLeft = '-200%'
             navResp();
         }
     })
@@ -140,7 +140,7 @@ export default function navbarLoad() {
         footerLoad();
 
         if (responsiveVw.matches) {
-            switchDiv.style.display = 'none';
+            switchDiv.style.marginLeft = '-200%'
             navResp();
         }
     })
