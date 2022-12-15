@@ -900,10 +900,71 @@ label {
         overflow: hidden;
     }
 
-    .contactpage {
-        overflow: hidden;
+    #titleWrap {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 80%;
     }
 
+    #menuTitle {
+        margin-bottom: 10px;
+    }
+
+    #titleDesc {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #menuCategory {
+        width: 80%;
+        margin: 0;
+        overflow: scroll;
+    }
+
+    #menuCategory::-webkit-scrollbar {
+        display: none;
+      }
+
+    #menuCategory li a {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #menuCategory li {
+        margin: 15px;
+    }
+
+    #menuCategory li:nth-child(1) {
+        white-space: nowrap;
+    }
+
+    #menuDiv {
+        width: 71%;
+    }
+
+    #subMenuDiv {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #foodMenuDesc {
+        text-align: justify;
+    }
+
+}
+
+@media only screen and (max-width: 514px) {
+    #menuCategory {
+        justify-content: flex-start;
+    }
+
+    #menuCategory li:nth-child(1) {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (max-width: 365px) {
@@ -916,26 +977,8 @@ label {
         width: 150px;
     }
 
-    .thirdHome {
-        background-size: cover;
-        overflow: auto;
-    }
-
-    #cardWrap {
-        margin-top: -40px;
-    }
-
-    .fourthHome {
-        height: 180vh;
-        overflow: auto;
-    }
-
     #headings {
         font-size: 1em;
-    }
-
-    #repo {
-        margin-bottom: 20px;
     }
 } 
 

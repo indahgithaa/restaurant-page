@@ -98,7 +98,7 @@ export default function navbarLoad() {
     function navResp() {
         navIconImg.addEventListener('click', () => {
             if (switchDiv.style.marginLeft == '0px') {
-                switchDiv.style.marginLeft = '-200%'
+                switchDiv.style.marginLeft = '-200%';
             } else {
                 switchDiv.style.marginLeft = '0px';
             }
@@ -121,8 +121,9 @@ export default function navbarLoad() {
         footerLoad();
 
         if (responsiveVw.matches) {
-            switchDiv.style.marginLeft = '-200%'
+            switchDiv.style.marginLeft = '-200%';
             navResp();
+            switchDiv.style.transition = 'all 0.3s ease';
         }
     })
 
@@ -140,7 +141,8 @@ export default function navbarLoad() {
         footerLoad();
 
         if (responsiveVw.matches) {
-            switchDiv.style.marginLeft = '-200%'
+            switchDiv.style.transition = 'all 0.3s ease';
+            switchDiv.style.marginLeft = '-200%';
             navResp();
         }
     })
