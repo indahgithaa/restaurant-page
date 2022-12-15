@@ -129,6 +129,7 @@ export default function navbarLoad() {
 
     home.addEventListener('click', () => {
         window.location.reload();
+        window.scrollTo(0, 0);
     })
 
     contact.addEventListener('click', (e) => {

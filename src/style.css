@@ -736,7 +736,7 @@ label {
     }
 
     #secondImg {
-        width: 200px;
+        width: 50vw;
     }
 
     #captionWrap {
@@ -798,7 +798,7 @@ label {
     }
 
     #cardWrap p {
-        font-size: 0.8rem;
+        font-size: 0.8em;
     }
 
     #thirdTitle {
@@ -837,7 +837,7 @@ label {
 
     #fourthTitle {
         font-size: 2em;
-        margin-bottom: -17vh;
+        margin-bottom: -150px;
     }
 
     #foodCardWrap {
@@ -968,12 +968,39 @@ label {
 
     /* CONTACT PAGE */
 
-    #contactdiv {
-        display: flex;
-        flex-direction: column-reverse;
+    .contactpage {
+        height: 100%;
+        background: none;
     }
 
+    #contactdiv {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 0;
+        height: 100%;
+        box-shadow: none;
+        padding: 0;
+        width: 80vw;
+        margin-bottom: 50px;
+    }
 
+    #infoDiv {
+        padding-left: 0;
+    }
+
+    form {
+        margin-top: 50px;
+    }
+
+    #belowIcon {
+        justify-content: center;
+    }
+
+    #belowIcon img:nth-child(2) {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
 
 @media only screen and (max-width: 514px) {
@@ -997,20 +1024,10 @@ label {
     }
 
     #headings {
-        font-size: 1em;
+        font-size: 1.1em;
+    }
+
+    #card{
+        width: 80vw;
     }
 } 
-
-
-  /*   #switchdiv li:nth-child(1) {
-        margin-top: 100px;
-    }
-
-    #switchdiv li:nth-child(2) {
-    }
-
-    #switchdiv li:nth-child(3) {
-        margin-top: auto;
-        margin-bottom: 50px;
-    }
-*/

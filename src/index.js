@@ -5,6 +5,7 @@ import { homeNav } from './pages/navbarload';
 import footerLoad from "./pages/footerLoad";
 
 window.onload = () => {
+    window.scrollTo(0, 0);
     navbarLoad();
     homeNav.style.color = 'var(--color-3)';
     homePage();
