@@ -13,11 +13,9 @@ A simple restaurant page created with Vanilla JavaScript, CSS, and Webpack. Buil
     * CSS
 * Tools:
     * Webpack
-    * Prettier
-    * ESlint
 
 ## Outcomes
-By building this project from scratch, I could learn some new things as following:
+By building this project, I could learn some new things such as following:
 * How to set up Webpack on a project as a module bundler, especially about plugins, loader, cache, assets management, and custom configuration.
 * How to use ESlint and Prettier to clean up and improve code writing.
 * Deepened knowledge of dynamically generating HTML elements and DOM Manipulation using JavaScript.
