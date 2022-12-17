@@ -208,8 +208,8 @@ export default function homePage() {
 
   const hiddenDivX = document.querySelectorAll(".hiddenX");
   const hiddenDivXright = document.querySelectorAll(".hiddenXright");
-  const hiddenDivY = document.querySelectorAll('.hiddenY');
-  const hiddenDivYUp = document.querySelectorAll('.hiddenYUp');
+  const hiddenDivY = document.querySelectorAll(".hiddenY");
+  const hiddenDivYUp = document.querySelectorAll(".hiddenYUp");
 
   hiddenDivX.forEach((hDiv) => observerX.observe(hDiv));
   hiddenDivXright.forEach((hDiv) => observerX.observe(hDiv));

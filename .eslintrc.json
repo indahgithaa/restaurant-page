@@ -7,6 +7,6 @@
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest"
-  }, 
+  },
   "extends": ["plugin:prettier/recommended"]
 }
